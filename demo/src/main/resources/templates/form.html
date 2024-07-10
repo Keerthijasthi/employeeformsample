@@ -1,0 +1,86 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Employee Form</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Employee Form</h1>-->
+
+<!--<form action="#" th:action="@{/submitForm}" th:object="${employee}" method="post">-->
+<!--    <div>-->
+<!--        <label>Name: </label>-->
+<!--        <input type="text" th:field="*{name}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Email: </label>-->
+<!--        <input type="email" th:field="*{email}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Department: </label>-->
+<!--        <input type="text" th:field="*{department}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <button type="submit">Submit</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title>Employee Form</title>-->
+<!--    &lt;!&ndash; Corrected path to include the JavaScript file &ndash;&gt;-->
+<!--    <script src="/scripts/form.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Employee Form</h1>-->
+<!--<form action="#" th:action="@{/submitForm}" th:object="${employee}" method="post" onsubmit="return validateForm()">-->
+<!--    <div>-->
+<!--        <label>Name: </label>-->
+<!--        <input type="text" th:field="*{name}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Email: </label>-->
+<!--        <input type="email" th:field="*{email}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Department: </label>-->
+<!--        <input type="text" th:field="*{department}" />-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <button type="submit">Submit</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Form</title>
+    <script src="/scripts/form.js"></script>
+</head>
+<body>
+<h1>Employee Form</h1>
+<form action="#" th:action="@{/submitForm}" th:object="${employee}" method="post" onsubmit="return validateForm()">
+    <div>
+        <label>Name: </label>
+        <input type="text" name="name" th:field="*{name}" />
+    </div>
+    <div>
+        <label>Email: </label>
+        <input type="email" name="email" th:field="*{email}" />
+    </div>
+    <div>
+        <label>Department: </label>
+        <input type="text" name="department" th:field="*{department}" />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
